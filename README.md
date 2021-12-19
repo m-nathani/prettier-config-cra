@@ -26,3 +26,6 @@ $ npm i --save-dev prettier-config-cra
 ```
 "prettier-config-cra"
 ```
+
+## License
+prettier-config-cra is open source software licensed as MIT.
