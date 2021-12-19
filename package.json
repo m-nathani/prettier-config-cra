@@ -1,0 +1,21 @@
+{
+  "name": "prettier-config-cra",
+  "version": "2.0.0",
+  "description": "Create reat app Prettier config",
+  "keywords": [
+    "cra",
+    "prettier",
+    "config",
+    "plugin"
+  ],
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-nathani/prettier-config-cra.git"
+  },
+  "author": "mudza100@gmail.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
