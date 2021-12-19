@@ -1,0 +1,45 @@
+name: Prettier Config
+on:
+  # Trigger the workflow on push,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fregante/setup-git-user@v1
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Set npm config
+        run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Release
+        run: |
+          npx standard-version --release-as major
+
+      - name: Publish
+        run: |
+          npm publish --ignore-scripts
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - run: |
+          git push --follow-tags origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
