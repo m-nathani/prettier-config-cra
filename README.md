@@ -1,13 +1,13 @@
-# @umai/prettier-config
+# prettier-config-cra
 
-> UMAI [Prettier](https://prettier.io) config.
+> Create react app [Prettier](https://prettier.io) config.
 
 ## Usage
 
 **Install**:
 
 ```bash
-$ npm i --save-dev @umai/prettier-config
+$ npm i --save-dev prettier-config-cra
 ```
 
 **Edit `package.json`**:
@@ -15,7 +15,7 @@ $ npm i --save-dev @umai/prettier-config
 ```jsonc
 {
   // ...
-  "prettier": "@umai/prettier-config"
+  "prettier": "prettier-config-cra"
 }
 ```
 
@@ -24,5 +24,5 @@ $ npm i --save-dev @umai/prettier-config
 **Use any of the supported extensions to export a string, e.g. `.prettierrc`:**
 
 ```
-"@umai/prettier-config"
+"prettier-config-cra"
 ```

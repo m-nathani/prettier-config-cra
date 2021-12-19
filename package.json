@@ -16,6 +16,6 @@
   "author": "mudza100@gmail.com",
   "license": "MIT",
   "peerDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1"
   }
 }
