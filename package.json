@@ -1,12 +1,16 @@
 {
   "name": "prettier-config-cra",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Create reat app Prettier config",
   "keywords": [
     "cra",
     "prettier",
     "config",
-    "plugin"
+    "plugin",
+    "lint",
+    "javascript",
+    "styleguide",
+    "react"
   ],
   "main": "index.json",
   "repository": {
