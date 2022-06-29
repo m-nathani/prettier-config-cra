@@ -3,7 +3,7 @@
   "version": "5.0.0",
   "description": "Create reat app Prettier config",
   "keywords": [
-    "cra",
+    "cra5",
     "prettier",
     "config",
     "plugin",
@@ -20,6 +20,6 @@
   "author": "mudza100@gmail.com",
   "license": "MIT",
   "peerDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.7.1"
   }
 }
